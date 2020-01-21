@@ -14,7 +14,7 @@ public class Exercises {
 
 	public String[] endsMeet(String[] values, int n) {
 		String emptyString[] = new String[0];
-		String newString = new String[n * 2];
+		String newString[] = new String[n * 2];
 		if (values == null || values.length < n || n <= 0) {
 			return emptyString;
 		} else {
@@ -22,14 +22,14 @@ public class Exercises {
 				newString[i] = values[i];
 			}
 
-			for (int j = values.length;  j > (values.length - n); j--) {
-				newString[j] = values[j];
+			int backCount = n;
+			for (int j = 0; j < n; j++) {
+				newString[j] = values[values.length - backCount];
+				backCount--;
 			}
 
 			return newString;
 		}
-
-		return null;	// default return value to ensure compilation
 	}
 
 	public int difference(int[] numbers) {
