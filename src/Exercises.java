@@ -22,9 +22,11 @@ public class Exercises {
 				newString[i] = values[i];
 			}
 
-			for (int i = values.length;  i > (values.length - n); i--) {
-				
+			for (int j = values.length;  j > (values.length - n); j--) {
+				newString[j] = values[j];
 			}
+
+			return newString;
 		}
 
 		return null;	// default return value to ensure compilation
