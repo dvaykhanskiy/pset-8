@@ -108,11 +108,17 @@ public class Exercises {
 	}
 
 	public boolean everywhere(int[] numbers, int x) {
-		if (values == null || values.length < 1) {
+		if (numbers == null || numbers.length < 1) {
 			return false;
 		}
 
-		return false;	// default return value to ensure compilation
+		for (int i = 1; i < numbers.length - 1; i ++) {
+			if (!(numbers[i] == x || numbers[i - 1] == x || numbers[i + 1] == x)) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 
 	public boolean consecutive(int[] numbers) {
