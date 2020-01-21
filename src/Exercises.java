@@ -14,11 +14,17 @@ public class Exercises {
 
 	public String[] endsMeet(String[] values, int n) {
 		String emptyString[] = new String[0];
-		String newString = new String[];
+		String newString = new String[n * 2];
 		if (values == null || values.length < n || n <= 0) {
 			return emptyString;
 		} else {
+			for (int i = 0; i < n; i++) {
+				newString[i] = values[i];
+			}
 
+			for (int i = values.length;  i > (values.length - n); i--) {
+				
+			}
 		}
 
 		return null;	// default return value to ensure compilation
