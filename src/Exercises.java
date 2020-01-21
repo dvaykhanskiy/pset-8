@@ -98,22 +98,13 @@ public class Exercises {
 			return false;
 		}
 
-		int increasing = 1;
-		boolean reachedThree = false;
-		for (int i : numbers) {
-			if (i > 0) {
-				if (numbers[i] > numbers[i - 1]) {
-					increasing++;
-					if (increasing == 3) {
-						reachedThree = true;
-					}
-				} else {
-					increasing = 1;
-				}
+		for (int i = 1; i < numbers.length; i++) {
+			if (numbers[i] > numbers[i - 1] && numbers[i] < numbers[i + 1]) {
+				return true;
 			}
 		}
 
-		return reachedThree;
+		return false;
 	}
 
 	public boolean everywhere(int[] numbers, int x) {
