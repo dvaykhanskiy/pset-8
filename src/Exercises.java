@@ -13,7 +13,8 @@ public class Exercises {
 	}
 
 	public String[] endsMeet(String[] values, int n) {
-		String emptyString[] = new String[];
+		String emptyString[] = new String[0];
+		String newString = new String[];
 		if (values == null || values.length < n || n <= 0) {
 			return emptyString;
 		} else {
