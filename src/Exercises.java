@@ -53,7 +53,14 @@ public class Exercises {
 	}
 
 	public double biggest(double[] numbers) {
-		// write your code here
+		if (numbers == null || numbers.length % 2 == 0) {
+			return -1;
+		}
+		for (i = 0; i < numbers.length; i++) {
+			if (numbers[i] < 0) {
+				return -1;
+			}
+		}
 
 		return -1;		// default return value to ensure compilation
 	}
