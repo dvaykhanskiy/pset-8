@@ -108,7 +108,9 @@ public class Exercises {
 	}
 
 	public boolean everywhere(int[] numbers, int x) {
-		// write your code here
+		if (values == null || values.length < 1) {
+			return false;
+		}
 
 		return false;	// default return value to ensure compilation
 	}
