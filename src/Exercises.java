@@ -34,7 +34,23 @@ public class Exercises {
 	}
 
 	public int difference(int[] numbers) {
-		// write your code here
+		if (numbers == null || numbers.length < 1) {
+			return -1;
+		} else {
+			int min = numbers[0];
+			int max = numbers[0];
+
+			for (int i : numbers) {
+				if (i < min) {
+					min = i;
+				}
+				if (i > max) {
+					max = i;
+				}
+			}
+
+			return max - min;
+		}
 
 		return -1;		// default return value to ensure compilation
 	}
