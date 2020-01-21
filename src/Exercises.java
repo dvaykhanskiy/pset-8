@@ -170,23 +170,18 @@ public class Exercises {
 			}
 		}
 
-		boolean isSame = false;
-    boolean prevSame = false;
-    String lastValue = "";
-    int clumps = 0;
-
-    for (int i = 0; i < values.length; i++) {
-        if (lastValue.equals(values[i])) {
-            isSame = true;
-            if (prevSame != true) {
-                clumps++;
-            }
-        } else {
-            isSame = false;
-        }
-        previous = values[i];
-        prevSame = isSame;
-    }
+		int count = 0;
+		String lastValue = "";
+		for (int i = 0; i < values.length - 1; i++) {
+			if (values.length > 1) {
+				if ((values[i].equals(values[i + 1])) && !(values[i].equals(lastValue))) {
+					count++;
+					lastValue = values[i];
+				}
+		} else {
+			return 0;
+		}
+		}
 
 		return count;
 	}
