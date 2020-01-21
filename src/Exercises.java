@@ -94,9 +94,26 @@ public class Exercises {
 	}
 
 	public boolean increasing(int[] numbers) {
-		// write your code here
+		if (numbers ==  null || numbers.length < 3) {
+			return false;
+		}
 
-		return false;	// default return value to ensure compilation
+		int increasing = 1;
+		boolean reachedThree = false;
+		for (int i : numbers) {
+			if (i > 0) {
+				if (numbers[i] > numbers[i - 1]) {
+					increasing++;
+					if (increasing == 3) {
+						reachedThree = true;
+					}
+				} else {
+					increasing = 1;
+				}
+			}
+		}
+
+		return reachedThree;
 	}
 
 	public boolean everywhere(int[] numbers, int x) {
