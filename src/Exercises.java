@@ -62,7 +62,15 @@ public class Exercises {
 			}
 		}
 
-		return -1;		// default return value to ensure compilation
+		int big = numbers[1];
+		if (big < numbers[numbers.length - 1]) {
+			big = numbers[numbers.length - 1];
+		}
+		if (big < numbers[(numbers.length + 1) / 2]) {
+			big = numbers[(numbers.length + 1) / 2];
+		}
+
+		return big;		// default return value to ensure compilation
 	}
 
 	public String[] middle(String[] values) {
