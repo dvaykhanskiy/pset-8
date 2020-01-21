@@ -36,23 +36,20 @@ public class Exercises {
 	public int difference(int[] numbers) {
 		if (numbers == null || numbers.length < 1) {
 			return -1;
-		} else {
-			int min = numbers[0];
-			int max = numbers[0];
+		}
+		int min = numbers[0];
+		int max = numbers[0];
 
-			for (int i : numbers) {
-				if (i < min) {
-					min = i;
-				}
-				if (i > max) {
-					max = i;
-				}
+		for (int i : numbers) {
+			if (i < min) {
+				min = i;
 			}
-
-			return max - min;
+			if (i > max) {
+				max = i;
+			}
 		}
 
-		return -1;		// default return value to ensure compilation
+		return max - min;
 	}
 
 	public double biggest(double[] numbers) {
