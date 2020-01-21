@@ -14,22 +14,23 @@ public class Exercises {
 
 	public String[] endsMeet(String[] values, int n) {
 		String emptyString[] = new String[0];
-		String newString[] = new String[n * 2];
-		if (values == null || values.length < n || n <= 0) {
+		if (values == null || n < 0 || values.length < n) {
 			return emptyString;
-		} else {
-			for (int i = 0; i < n; i++) {
-				newString[i] = values[i];
-			}
-
-			int backCount = n;
-			for (int j = 0; j < n; j++) {
-				newString[j] = values[values.length - backCount];
-				backCount--;
-			}
-
-			return newString;
 		}
+
+		String newString[] = new String[n * 2];
+
+		for (int i = 0; i < n; i++) {
+			newString[i] = values[i];
+		}
+
+		int backCount = n;
+		for (int j = n; j < n * 2; j++) {
+			newString[j] = values[values.length - backCount];
+			backCount--;
+		}
+
+		return newString;
 	}
 
 	public int difference(int[] numbers) {
