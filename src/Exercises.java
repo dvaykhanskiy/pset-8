@@ -74,7 +74,18 @@ public class Exercises {
 	}
 
 	public String[] middle(String[] values) {
-		// write your code here
+		String emptyString[] = new String[0];
+		if (values == null  || values.length % 2 == 0 || values.length < 3) {
+			return emptyString;
+		}
+		for (int i : values) {
+			if (i == null) {
+				return emptyString;
+			}
+		}
+
+		
+
 
 		return null;	// default return value to ensure compilation
 	}
