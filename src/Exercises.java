@@ -53,21 +53,21 @@ public class Exercises {
 	}
 
 	public double biggest(double[] numbers) {
-		if (numbers == null || numbers.length % 2 == 0) {
+		if (numbers == null || numbers.length % 2 == 0 || numbers.length < 3) {
 			return -1;
 		}
-		for (i = 0; i < numbers.length; i++) {
+		for (int i = 0; i < numbers.length; i++) {
 			if (numbers[i] < 0) {
 				return -1;
 			}
 		}
 
-		int big = numbers[1];
+		double big = numbers[0];
 		if (big < numbers[numbers.length - 1]) {
 			big = numbers[numbers.length - 1];
 		}
-		if (big < numbers[(numbers.length + 1) / 2]) {
-			big = numbers[(numbers.length + 1) / 2];
+		if (big < numbers[((numbers.length + 1) / 2) - 1]) {
+			big = numbers[((numbers.length + 1) / 2) - 1];
 		}
 
 		return big;		// default return value to ensure compilation
