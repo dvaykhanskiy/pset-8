@@ -78,16 +78,19 @@ public class Exercises {
 		if (values == null  || values.length % 2 == 0 || values.length < 3) {
 			return emptyString;
 		}
-		for (int i : values) {
+		for (String i : values) {
 			if (i == null) {
 				return emptyString;
 			}
 		}
 
-		
+		String newString[] = new String[3];
+		for (int i = 0; i < 3; i++) {
+			newString[i] = values[((values.length + 1) / 2) - 2 + i];
+		}
 
 
-		return null;	// default return value to ensure compilation
+		return newString;
 	}
 
 	public boolean increasing(int[] numbers) {
