@@ -13,7 +13,12 @@ public class Exercises {
 	}
 
 	public String[] endsMeet(String[] values, int n) {
-		
+		String emptyString[] = new String[];
+		if (values == null || values.length < n || n <= 0) {
+			return emptyString;
+		} else {
+
+		}
 
 		return null;	// default return value to ensure compilation
 	}
